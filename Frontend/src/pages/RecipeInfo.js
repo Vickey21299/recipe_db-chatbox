@@ -5,14 +5,12 @@ import {  ColorRing } from 'react-loader-spinner'
 import './RecipeInfo.css'
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-
 const RecipeList = (props)  => {
     //const {recipe_id} = useParams();
     const recipe_id = localStorage.getItem('id');
     const [instructionInfo, setInstructionInfo] = useState(null);
     const [recipeInfo, setRecipeInfo] = useState(null)
     const [ingridientInfo,setIngridientInfo] = useState(null);
-
     useEffect(()=>{
             axios({
                 method :"GET",
@@ -35,7 +33,6 @@ const RecipeList = (props)  => {
                 }
                 setIngridientInfo(lst);
                 console.log('lst data',lst,'len: ',len);
-                
           }).catch(err=>{
             console.log('error got while getting indridents',err);
           })
@@ -152,9 +149,9 @@ const RecipeList = (props)  => {
     return( <div>
             <Header/>
             {response}
-           <Footer/>
-
+            <Footer/>
         </div>
     );
+
 }
 export default RecipeList;

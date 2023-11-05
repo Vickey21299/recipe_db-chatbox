@@ -20,9 +20,10 @@ const Header = (props) => {
   return (
     <nav className="headerStyles">
       <ul>
-        <img src={require('./RecipeDBLogo.png')} alt="RecipeDB Logo" />
-        <p>RecipeDB</p>
+        <img src={require('./RecipeDBLogo.png')}onClick={handleHomeClick} alt="RecipeDB Logo" />
+        <p onClick={ handleHomeClick}>RecipeDB</p>
         <div className="navigation-menu horizontal-menu">
+        
           <li onClick={handleHomeClick}>Home</li>
           <li onClick={handleCoSyClick}>CoSyLab</li>
           <li onClick={handleContactClick}>Contact</li>

@@ -46,6 +46,126 @@
   
   .tablestyleIng tr:nth-child(odd){background-color: #f7f7f7;}
   .tablestyleIng tr:nth-child(even){background-color: #e5e5e5;}
+
+  .left-margin{
+    margin-left: rem;
+  }
+
+
+  .chatbot-heading {
+    text-align: center;
+    font-family: 'YourFont', sans-serif; /* Apply the custom font to the heading */
+    font-size: 2rem;
+    color:rgb(0, 91, 44); /* Set the text color as needed */
+  }
+  
+  .rounded-button {
+    background-color: #007bff; /* Background color of the button */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 25px; /* Border radius to make corners rounded */
+    cursor: pointer; /* Change cursor to a hand when hovering */
+    font-size: 25px;
+    /* Hover state */
+    transition: background-color 0.5s; /* Smooth transition */
+    /* Margin */
+    margin-top: 4rem;
+    margin-left: 20%;
+  }
+  .rounded-button1{
+    background-color: #007bff; /* Background color of the button */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 25px; /* Border radius to make corners rounded */
+    cursor: pointer; /* Change cursor to a hand when hovering */
+    font-size: 25px;
+    /* Hover state */
+    transition: background-color 0.5s; /* Smooth transition */
+    /* Margin */
+    margin-top: 4rem;
+    margin-left: 16.5%;
+    margin-bottom: 9rem;
+  }
+  .rounded-button2{
+    background-color: #007bff; /* Background color of the button */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 25px; /* Border radius to make corners rounded */
+    cursor: pointer; /* Change cursor to a hand when hovering */
+    font-size: 25px;
+    /* Hover state */
+    transition: background-color 0.5s; /* Smooth transition */
+    /* Margin */
+    margin-top: 4rem;
+    margin-left: 16.5%;
+  }
+  
+  
+    /* .buttonstyle{
+      background-color: #2e68dc;
+      border : rgb(63, 199, 174);
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      padding: 1rem 1rem;
+      border-radius: 13%;
+    } */
+    .rounded-button1{
+      margin-top :  1rem;
+      margin-left:  5%;
+    }
+    .rounded-button{
+      margin-top :  1rem;
+      margin-left:  30%;
+  
+    }
+    .rounded-button2{
+      margin-top :  1rem;
+      margin-left:  5%; 
+  
+    } 
+  
+  
+    .rounded-button:hover {
+      background-color: rgb(218, 218, 8); /* New background color on hover */
+    }
+  
+    .rounded-button1:hover {
+      background-color: rgb(218, 218, 8); /* New background color on hover */
+    }
+    .rounded-button2:hover {
+      background-color: rgb(218, 218, 8); /* New background color on hover */
+    }
+    .buttonstyle:hover{
+      background-color: #ffe959; /* Green */
+    }
+    /* .textareastyle{
+      margin-top: 3rem ;
+      margin-left: 8rem;
+      text-align: center;
+      font-size: 2rem;
+      background-color: #F5E9CF;
+      width: 80%;
+      height:20rem;
+    } */
+  
+    .textareastyle{
+      margin-top: 5rem;
+      margin-left: 8rem;
+      text-align: center;
+      font-size: 1.2rem;
+      background-color: transparent;
+      border: 1px solid #000; /* Add a plain black border */
+      width: 80%;
+      height : 2 rem;
+      resize:none ;
+      padding: 0.5rem;
+      border-radius:25px; /* Add rounded corners */
+      /* overflow: hidden; */
+    }
   
 @media (max-heigth : 700px) {
 }

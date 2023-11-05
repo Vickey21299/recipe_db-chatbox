@@ -10,8 +10,8 @@ const App = () => {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/recipe-voice-bot" element={<Home />} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/recipe-voice-bot/" element={<Home />} />
           <Route path="/recipe-voice-bot/search_recipe" element={<RecipeList />} />
           <Route path="/recipe-voice-bot/recipe_info" element={<RecipeInfo />} />
           <Route path="/recipe-voice-bot/contact" element={<Contact />} />
