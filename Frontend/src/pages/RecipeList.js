@@ -39,21 +39,25 @@ const RecipeList = (props) => {
   function handleSubmit(event) {
     console.log("user wants to say: ", user1Transcript);
     if (user1Transcript.trim().length > 0) {
-      localStorage.setItem('userTranscript', user1Transcript);
-      axios({
-        method: 'GET',
-        url: `https://cosylab.iiitd.edu.in/recipe-voice-bot-backend/api/findRecipeByText/` + user1Transcript,
-      })
-        .then((res) => {
-          console.log('data got', res.data);
-          setJsonData(res.data);
-        })
-        .catch((err) => {
-          console.log('error got', err);
-        });
-      setFirstTime(true);
-      window.location.reload(false);
+    //   localStorage.setItem('userTranscript', user1Transcript);
+    //   axios({
+    //     method: 'GET',
+    //     url: `https://cosylab.iiitd.edu.in/recipe-voice-bot-backend/api/findRecipeByText/` + user1Transcript,
+    //   })
+    //     .then((res) => {
+    //       console.log('data got', res.data);
+    //       setJsonData(res.data);
+    //     })
+    //     .catch((err) => {
+    //       console.log('error got', err);
+    //     });
+    //   setFirstTime(true);
+    //   window.location.reload(false);
+    navigate('/recipe-voice-bot/search_recipe')
+    localStorage.setItem('userTranscript', user1Transcript);
+    window.location.reload(false);
     }
+    setUser1Transcipt("");
   }
 
   useEffect(() => {
@@ -93,29 +97,15 @@ const RecipeList = (props) => {
     <div>
       <Header></Header>
       <h2 className="left-margin">{listening ? 'Listening...' : ''}</h2>
-
       <form onSubmit={handleSubmit} className="centerdiv">
         <label>
-          <textarea
-            type="text"
-            value={user1Transcript}
-            onChange={handleChange}
-            placeholder={userTranscript}
-            className="textareastyleRL"
+          <input type="text" value={userTranscript} onChange={handleChange} placeholder={userTranscript} className="textareastyleRL"
           />
         </label>
       </form>
-
-      <button className="rounded-buttonrl" onClick={SpeechRecognition.startListening}>
-        SPEAK
-      </button>
-      <button className="rounded-buttonrl1" onClick={resetTranscript}>
-        CLEAR
-      </button>
-
-      <button className="rounded-buttonrl2" onClick={handleSubmit}>
-        SUBMIT
-      </button>
+      <button className="rounded-buttonrl" onClick={SpeechRecognition.startListening}>SPEAK</button>
+      <button className="rounded-buttonrl1" onClick={resetTranscript}>CLEAR</button>
+      <button className="rounded-buttonrl2" onClick={handleSubmit}>SUBMIT</button>
       {response}
     </div>
   );

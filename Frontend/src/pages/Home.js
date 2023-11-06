@@ -50,15 +50,15 @@ const Home = (props) => {
     }
 
 
-    function handleSubmit(event) {
-        console.log("user wants to say : ", userTranscript)
-        if (userTranscript.trim().length > 0) {
-            window.open('/recipe-voice-bot/search_recipe')
-            localStorage.setItem('userTranscript', userTranscript);
-        }
-        setUserTranscipt("")
+    // function handleSubmit(event) {
+    //     console.log("user wants to say : ", userTranscript)
+    //     if (userTranscript.trim().length > 0) {
+    //         window.open('/recipe-voice-bot/search_recipe')
+    //         localStorage.setItem('userTranscript', userTranscript);
+    //     }
+    //     setUserTranscipt("")
 
-    }
+    // }
 
     function resetTranscript() {
         SpeechRecognition.stopListening()
@@ -101,7 +101,9 @@ const Home = (props) => {
                             <p className={selectedItem === "Could you suggest Thai recipes for me to prepare at home?" ? "selected" : ""} onClick={() => handleDropdownClick("Could you suggest Thai recipes for me to prepare at home?")}> Could you suggest Thai recipes for me to prepare at home?</p>
                             <p className={selectedItem === "Recommend some indigenous Korean recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Recommend some indigenous Korean recipes")}>Recommend some indigenous Korean recipes</p>
                             <p className={selectedItem === "Give a list of some Australian recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Give a list of some Australian recipes")}>Give a list of some Australian recipes</p>
+                            
                             <p className={selectedItem === "Show me some Belgian dishes involving Chocolate." ? "selected" : ""} onClick={() => handleDropdownClick("Show me some Belgian dishes involving Chocolate.")}>Show me some Belgian dishes involving Chocolate.</p>
+                        onKeyPress  = {(event) => {if (event.key === 'Enter') {handleSubmit(event);}}}
                         </div>
                         </a>
                         &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a2' onClick={changeDisplay} style={{ textDecoration: 'None', color: 'black' }}> Ingredients <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon>
@@ -158,10 +160,17 @@ const Home = (props) => {
 
                 <form onSubmit={handleSubmit} className='centerdiv'>
                     <label >
-                        <textarea type="text" value={userTranscript} onChange={handleChange} onRateChange={handleSubmit}onKeyPress={(event) => {if (event.key === 'Enter') {handleSubmit(event);}}} placeholder="Click SPEAK Button to ask queries to RecipeDB..." className='textareastyle' />
+                        <textarea type="text" value={userTranscript} onChange={handleChange}
+                        onRateChange={
+                            (rate) => {
+                                if (rate === 0 && userTranscript.trim() !== '') {
+                                  handleSubmit();
+                                }
+                            }
+                         } placeholder="Click SPEAK Button to ask queries to RecipeDB..." className='textareastyle' />
                     </label>
-                </form>
-
+                </form>       
+                onKeyPress  = {(event) => {if (event.key === 'Enter') {handleSubmit(event);}}}
                 <button className='rounded-button' onClick={SpeechRecognition.startListening}>SPEAK</button>
                 <button className='rounded-button1' onClick={resetTranscript}>CLEAR</button>
 

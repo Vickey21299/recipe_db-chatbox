@@ -8,16 +8,16 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const App = () => {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/recipe-voice-bot/" element={<Home />} />
-          <Route path="/recipe-voice-bot/search_recipe" element={<RecipeList />} />
-          <Route path="/recipe-voice-bot/recipe_info" element={<RecipeInfo />} />
-          <Route path="/recipe-voice-bot/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/recipe-voice-bot/" element={<Home />} />
+        <Route path="/recipe-voice-bot/search_recipe" element={<RecipeList />} />
+        <Route path="/recipe-voice-bot/recipe_info" element={<RecipeInfo />} />
+        <Route path="/recipe-voice-bot/contact" element={<Contact />} />
+      </Routes>
+    </div>
+  </Router>
   );
 };
 

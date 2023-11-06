@@ -5,12 +5,50 @@ import {  ColorRing } from 'react-loader-spinner'
 import './RecipeInfo.css'
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { useNavigate } from 'react-router-dom';
 const RecipeList = (props)  => {
     //const {recipe_id} = useParams();
+    const userTranscript = localStorage.getItem('userTranscript');
     const recipe_id = localStorage.getItem('id');
     const [instructionInfo, setInstructionInfo] = useState(null);
     const [recipeInfo, setRecipeInfo] = useState(null)
     const [ingridientInfo,setIngridientInfo] = useState(null);
+    const {
+        transcript,
+        listening,
+        browserSupportsSpeechRecognition,
+        isMicrophoneAvailable
+    } = useSpeechRecognition() ;
+    const navigate = useNavigate();
+    const [user1Transcript, setUser1Transcipt] = useState("")
+    useEffect(() => {
+        setUser1Transcipt(transcript)
+    }, [transcript])
+
+    if (!browserSupportsSpeechRecognition || !isMicrophoneAvailable) {
+        return <span>Browser doesn't support speech recognition.</span>;
+    }
+
+    function handleChange(event) {
+        setUser1Transcipt(event.target.value)
+    }
+    function resetTranscript() {
+        SpeechRecognition.stopListening()
+        setUser1Transcipt("");
+    }
+
+    function handleSubmit(event) {
+        console.log("user wants to say : ", user1Transcript)
+        if (user1Transcript.trim().length > 0) {
+            navigate('/recipe-voice-bot/search_recipe')
+            localStorage.setItem('userTranscript', user1Transcript);
+        }
+        setUser1Transcipt("")
+
+    }
+
+
     useEffect(()=>{
             axios({
                 method :"GET",
@@ -33,6 +71,7 @@ const RecipeList = (props)  => {
                 }
                 setIngridientInfo(lst);
                 console.log('lst data',lst,'len: ',len);
+                
           }).catch(err=>{
             console.log('error got while getting indridents',err);
           })
@@ -148,10 +187,19 @@ const RecipeList = (props)  => {
 
     return( <div>
             <Header/>
+            <h2 className="left-margin">{listening ? 'Listening...' : ''}</h2>
+      <form onSubmit={handleSubmit} className="centerdiv">
+        <label>
+          <input type="text" value={userTranscript} onChange={handleChange} placeholder={userTranscript} className="textareastyleRL"
+          />
+        </label>
+      </form>
+      <button className="rounded-buttonrl" onClick={SpeechRecognition.startListening}>SPEAK</button>
+      <button className="rounded-buttonrl1" onClick={resetTranscript}>CLEAR</button>
+      <button className="rounded-buttonrl2" onClick={handleSubmit}>SUBMIT</button>
             {response}
-            <Footer/>
+           <Footer/>
         </div>
     );
-
 }
 export default RecipeList;
