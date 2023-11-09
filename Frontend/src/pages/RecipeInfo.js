@@ -9,7 +9,6 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import { useNavigate } from 'react-router-dom';
 const RecipeList = (props)  => {
     //const {recipe_id} = useParams();
-    const userTranscript = localStorage.getItem('userTranscript');
     const recipe_id = localStorage.getItem('id');
     const [instructionInfo, setInstructionInfo] = useState(null);
     const [recipeInfo, setRecipeInfo] = useState(null)
@@ -190,7 +189,7 @@ const RecipeList = (props)  => {
             <h2 className="left-margin">{listening ? 'Listening...' : ''}</h2>
       <form onSubmit={handleSubmit} className="centerdiv">
         <label>
-          <input type="text" value={userTranscript} onChange={handleChange} placeholder={userTranscript} className="textareastyleRL"
+          <input type="text" value={user1Transcript} onChange={handleChange} placeholder='Show your pussy' className="textareastyleRL"
           />
         </label>
       </form>

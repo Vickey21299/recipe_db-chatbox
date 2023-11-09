@@ -57,7 +57,6 @@ const RecipeList = (props) => {
     localStorage.setItem('userTranscript', user1Transcript);
     window.location.reload(false);
     }
-    setUser1Transcipt("");
   }
 
   useEffect(() => {
@@ -99,7 +98,7 @@ const RecipeList = (props) => {
       <h2 className="left-margin">{listening ? 'Listening...' : ''}</h2>
       <form onSubmit={handleSubmit} className="centerdiv">
         <label>
-          <input type="text" value={userTranscript} onChange={handleChange} placeholder={userTranscript} className="textareastyleRL"
+          <textarea type="text" value={user1Transcript} onChange={handleChange} placeholder="Click SPEAK Button to ask queries to RecipeDB..."className="textareastyleRL"
           />
         </label>
       </form>
