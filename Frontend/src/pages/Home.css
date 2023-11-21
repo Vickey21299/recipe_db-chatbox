@@ -6,9 +6,9 @@
 
 .dropdown-content {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #eee9e9;
   min-width: 160%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
@@ -23,7 +23,7 @@
 
 .dropdown-content2 {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
   background-color: #eee9e9;
   min-width: 300%;
@@ -31,43 +31,43 @@
   padding: 4% 7%;
   margin-left:auto;
   z-index: 10;
-  font-size: 70%;
+  font-size: 80%;
 }
 .dropdown-content3 {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #eee9e9;
   min-width: 180%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
   margin-right: auto;
   z-index: 10;
-  font-size: medium;
+  font-size: 80%;
 }
 .dropdown-content4 {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #eee9e9;
   min-width: 200%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
   margin-left: -107%;
   z-index: 10;
-  font-size: medium;
+  font-size: 80%;
 } 
 .dropdown-content5 {
   display: none;
-  cursor: text;
+  cursor: pointer;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #eee9e9;
   min-width: 388%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 4% 7%;
   margin-left: -143%;
   z-index: 10;
-  font-size: medium;
+  font-size: 80%;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -120,10 +120,10 @@
     align-items: center;
   }
  .custom-image{
-    width: 20%;
-    height: 20%;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 186px;
+    height: 190px;
+    /* object-fit: cover; */
+    
   }
   .custom-title {
     text-align: center;
@@ -148,8 +148,8 @@
   .helpStyle{
     text-align: center;
     font-size: 1.2rem;
-    font-weight: 500;
-    color: #E96479;
+    font-weight: 700;
+    color: rgb(0, 91, 44);
     
   }
   .helpStyle a:hover .fa{
@@ -219,8 +219,19 @@
     .buttonmargin2{
       margin-left: 2%;
     }
-    .chatbot-heading{
-      font-size: 25rem;
+    .image-and-text-container{
+      display: flex;
+      flex-direction: row;
+      margin-top: 2rem;
+      margin-left: 5%;
+      align-items: center;
+    }
+    .custom-image{
+      width: 50%;
+      height: 20%;
+    }
+    .custom-title{
+      font-size: 6rem;
     }
     .centerdiv{
       margin-top: 6%;
@@ -228,10 +239,12 @@
     .dropdown{
       display: inline-block;
       margin-bottom: 2%;
+      cursor: pointer;
     }
     .dropdown-content{
       min-width: 112%;
       margin-left: 0;
+      cursor: pointer;
     }
     .dropdown-content2{
       min-width: 180%;
@@ -249,13 +262,17 @@
       min-width: 230%;
       margin-left: -94%;
     }
-    .textareastyle{
-      height:5rem;
-      font-size: 3rem;
+    .textarea{
+      height:6.5rem;
+      font-size: 3.5rem;
       margin-top: 2rem;
     }
     #a1{
       margin-top: 6%;
+    }
+    #a3{
+      margin-top: 6%;
+      margin-left: 5%;
     }
     #a5{
       margin-left: 1%;
@@ -266,7 +283,8 @@
     }
     .ask{
       display: block;
-      font-weight: 700;
+      font-weight: 1000;
+      
     }
   }
   @media(max-width : 480px){

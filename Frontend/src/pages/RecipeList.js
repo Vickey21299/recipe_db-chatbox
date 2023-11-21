@@ -63,7 +63,8 @@ const RecipeList = (props) => {
     if (!isFirstTime) {
       axios({
         method: 'GET',
-        url: `https://cosylab.iiitd.edu.in/recipe-voice-bot-backend/api/findRecipeByText/` + userTranscript,
+        url: `https://cosylab.iiitd.edu.in/recipe-voice-bot-backend/api/findRecipeByText/` + userTranscript
+        // url : 'http://localhost:3002/api/findRecipeByText/' + userTranscript
       })
         .then((res) => {
           console.log('data got', res.data);

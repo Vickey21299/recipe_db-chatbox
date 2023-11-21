@@ -189,7 +189,7 @@ const RecipeList = (props)  => {
             <h2 className="left-margin">{listening ? 'Listening...' : ''}</h2>
       <form onSubmit={handleSubmit} className="centerdiv">
         <label>
-          <input type="text" value={user1Transcript} onChange={handleChange} placeholder='Show your pussy' className="textareastyleRL"
+          <input type="text" value={user1Transcript} onChange={handleChange} placeholder='Click here to search the recibedb' className="textareastyleRL"
           />
         </label>
       </form>

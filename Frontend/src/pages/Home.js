@@ -81,7 +81,7 @@ const Home = (props) => {
             <Header></Header>
             <div className='main'>
                 {/* <hr className='tophr' style={{width:'90%',marginTop:'2.5%',borderTop: '1px solid black'}}></hr> */}
-                <p className='helpStyle'><span className='ask'>Ask for Recipes by</span>
+                <p className='helpStyle'><span className='ask'>Search for Recipes by</span>
                     <span>
                         <a className='dropdown' id='a1' onClick={changeDisplay} style={{ textDecoration: 'None', color: 'black' }}>
                             &nbsp;&nbsp; &nbsp; &nbsp; Cuisine(Country) <FontAwesomeIcon onClick={changeDisplay} className='fa' icon={faCaretDown}></FontAwesomeIcon>
@@ -149,7 +149,7 @@ const Home = (props) => {
                 <h2 className='left-margin'>{listening ? 'Listening...' : ''}</h2>
                 <form onSubmit={handleSubmit} className='centerdiv'>
                     <label >
-                        <textarea type="text" value={userTranscript} onChange={handleChange} placeholder="Click SPEAK Button to ask queries to RecipeDB..." className='textarea' />
+                        <textarea type="text" value={userTranscript} onChange={handleChange}  onKeyPress={(event) => {if (event.key === 'Enter'){handleSubmit(event);}}} placeholder="Click SPEAK Button to ask queries to RecipeDB..."  className='textarea' />
                     </label>
                 </form> 
                 <button className='buttonstyle buttonmargin' onClick={SpeechRecognition.startListening}>SPEAK</button>
