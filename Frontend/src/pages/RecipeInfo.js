@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState }  from 'react';
+import React, { Component, useEffect, useState, useTransition }  from 'react';
 import {useParams} from "react-router-dom"
 import axios from 'axios'
 import {  ColorRing } from 'react-loader-spinner'
@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 const RecipeList = (props)  => {
     //const {recipe_id} = useParams();
     const recipe_id = localStorage.getItem('id');
+    const userTranscript = localStorage.getItem('userTranscript');
     const [instructionInfo, setInstructionInfo] = useState(null);
     const [recipeInfo, setRecipeInfo] = useState(null)
     const [ingridientInfo,setIngridientInfo] = useState(null);
@@ -189,7 +190,7 @@ const RecipeList = (props)  => {
             <h2 className="left-margin">{listening ? 'Listening...' : ''}</h2>
       <form onSubmit={handleSubmit} className="centerdiv">
         <label>
-          <input type="text" value={user1Transcript} onChange={handleChange} placeholder='Click here to search the recibedb' className="textareastyleRL"
+          <input type="text" value={user1Transcript || userTranscript} onChange={handleChange} onKeyPress={(event) => {if (event.key === 'Enter'){handleSubmit(event);}}} placeholder='Click here to search the recibedb' className="textareastyleRL"
           />
         </label>
       </form>

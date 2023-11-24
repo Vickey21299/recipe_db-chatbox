@@ -2,6 +2,7 @@ import React,{useMemo} from 'react'
 import  { Component, useEffect, useState }  from 'react';
 import {useTable, usePagination} from 'react-table'
 import {COLUMNS} from './columns'
+import { useNavigate } from 'react-router-dom';
 import './BasicTable.css'
 export const BasicTable = (props) => {
     const jsonData = props.jsonData;
@@ -27,6 +28,7 @@ export const BasicTable = (props) => {
         setPageSize,
         prepareRow} = tableInstance;
       const {pageIndex,pageSize} = state;
+      const navigate = useNavigate();
      
       const [first,setFirst] = useState(true);
       // set page size to 20.

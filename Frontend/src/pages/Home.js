@@ -9,9 +9,8 @@ import { faCaretDown, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { text } from '@fortawesome/fontawesome-svg-core';
-import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import logo from './RecipeDBLogoRed.png'
 const Home = (props) => {
     const {
         transcript,
@@ -138,7 +137,7 @@ const Home = (props) => {
                 </p>
                 <div className="image-and-text-container">
                     <img
-                    src={require('./RecipeDBLogoRed.png')}
+                    src={logo}
                     alt="Your Image"
                     className="custom-image"
                     />

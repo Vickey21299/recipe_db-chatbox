@@ -16,7 +16,7 @@ const  Footer = (props) =>{
             <a target="_blank" href="https://twitter.com/gansbags" ></a>
             <a target="_blank" href="https://www.linkedin.com/in/ganeshbagler"></a>
             </p>
-            <p className='devlop'>@ Devlop by Vickey kumar and Suyash kumar </p>
+            <p className='devlop'>@ Devloped by Vickey Kumar and Suyash Kumar </p>
 
     </div>
     );

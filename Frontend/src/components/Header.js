@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState }  from 'react';
 import './Header.css';
 import { useNavigate } from 'react-router-dom';
+import logo from './logo.png'
 const  Header = (props) =>{
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     const navigate = useNavigate();
@@ -40,7 +41,7 @@ const  Header = (props) =>{
     <nav className='headerStyles'>
        
         <ul>
-            <img src = {require('./RecipeDBLogoRed.png')} onClick={handleHomeClick} className='headerlogo'></img>
+            <img src = {logo} onClick={handleHomeClick} className='headerlogo'></img>
             {/* <p>RecipeDB </p> */}
            <p onClick={ handleHomeClick} className='headertitle'> RecipeDB </p>
            
