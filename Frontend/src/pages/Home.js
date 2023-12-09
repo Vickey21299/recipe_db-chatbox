@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import './Home.css';
 import axios from 'axios'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
@@ -6,11 +6,9 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import { text } from '@fortawesome/fontawesome-svg-core';
 import { useNavigate } from 'react-router-dom';
-import logo from './RecipeDBLogoRed.png'
+
+
 const Home = (props) => {
     const {
         transcript,
@@ -86,7 +84,7 @@ const Home = (props) => {
                             &nbsp;&nbsp; &nbsp; &nbsp; Cuisine(Country) <FontAwesomeIcon onClick={changeDisplay} className='fa' icon={faCaretDown}></FontAwesomeIcon>
                             <div className="dropdown-content">
                             <p className={selectedItem === "Show me Indian recipes." ? "selected" : ""} onClick={() => handleDropdownClick("Show me Indian recipes.")}>Show me Indian recipes.</p>
-                            <p className={selectedItem === "Could you suggest Thai recipes for me to prepare at home?" ? "selected" : ""} onClick={() => handleDropdownClick("Could you suggest Thai recipes for me to prepare at home?")}> Could you suggest Thai recipes for me to prepare at home?</p>
+                            <p className={selectedItem === "Could you suggest Chinese recipes for me to prepare at home?" ? "selected" : ""} onClick={() => handleDropdownClick("Could you suggest Chinese recipe  for me to prepare at home?")}> Could you suggest Chinese recipes for me to prepare at home?</p>
                             <p className={selectedItem === "Recommend some indigenous Korean recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Recommend some indigenous Korean recipes")}>Recommend some indigenous Korean recipes</p>
                             <p className={selectedItem === "Give a list of some Australian recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Give a list of some Australian recipes")}>Give a list of some Australian recipes</p>
                             
@@ -137,7 +135,7 @@ const Home = (props) => {
                 </p>
                 <div className="image-and-text-container">
                     <img
-                    src={logo}
+                    src="/logo.png"
                     alt="Your Image"
                     className="custom-image"
                     />

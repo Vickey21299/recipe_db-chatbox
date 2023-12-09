@@ -218,7 +218,6 @@
     }
     .buttonmargin2{
       margin-left: 2%;
-      margin-bottom: 2%;
     }
     .image-and-text-container{
       display: flex;
@@ -228,11 +227,11 @@
       align-items: center;
     }
     .custom-image{
-      width: 40%;
-      height: 15%;
+      width: 50%;
+      height: 20%;
     }
     .custom-title{
-      font-size: 5rem;
+      font-size: 6rem;
     }
     .centerdiv{
       margin-top: 6%;

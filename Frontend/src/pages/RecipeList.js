@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 const RecipeList = (props) => {
   const [isFirstTime, setFirstTime] = useState(false);
-  const userTranscript = localStorage.getItem('userTranscript');
+  const [userTranscript ,setUserTranscipt] = useState (localStorage.getItem('userTranscript'),"");
   const {
     transcript,
     listening,
@@ -34,11 +34,26 @@ const RecipeList = (props) => {
   function resetTranscript() {
     SpeechRecognition.stopListening();
     setUser1Transcipt('');
+    setUserTranscipt('');
   }
 
   function handleSubmit(event) {
     console.log("user wants to say: ", user1Transcript);
     if (user1Transcript.trim().length > 0) {
+    //   localStorage.setItem('userTranscript', user1Transcript);
+    //   axios({
+    //     method: 'GET',
+    //     url: `https://cosylab.iiitd.edu.in/recipe-voice-bot-backend/api/findRecipeByText/` + user1Transcript,
+    //   })
+    //     .then((res) => {
+    //       console.log('data got', res.data);
+    //       setJsonData(res.data);
+    //     })
+    //     .catch((err) => {
+    //       console.log('error got', err);
+    //     });
+    //   setFirstTime(true);
+    //   window.location.reload(false);
     navigate('/recipe-voice-bot/search_recipe')
     localStorage.setItem('userTranscript', user1Transcript);
     window.location.reload(false);
@@ -85,7 +100,7 @@ const RecipeList = (props) => {
       <h2 className="left-margin">{listening ? 'Listening...' : ''}</h2>
       <form onSubmit={handleSubmit} className="centerdiv">
         <label>
-          <textarea type="text" value={user1Transcript || userTranscript} onChange={handleChange} onKeyPress={(event) => {if (event.key === 'Enter'){handleSubmit(event);}}} placeholder="Click SPEAK Button to ask queries to RecipeDB..."className="textareastyleRL"
+          <textarea type="text" value={user1Transcript || userTranscript} onChange={handleChange} placeholder="Click SPEAK Button to ask queries to RecipeDB..."className="textareastyleRL"
           />
         </label>
       </form>
