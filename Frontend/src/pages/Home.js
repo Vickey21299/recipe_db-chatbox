@@ -84,37 +84,36 @@ const Home = (props) => {
                             &nbsp;&nbsp; &nbsp; &nbsp; Cuisine(Country) <FontAwesomeIcon onClick={changeDisplay} className='fa' icon={faCaretDown}></FontAwesomeIcon>
                             <div className="dropdown-content">
                             <p className={selectedItem === "Show me Indian recipes." ? "selected" : ""} onClick={() => handleDropdownClick("Show me Indian recipes.")}>Show me Indian recipes.</p>
-                            <p className={selectedItem === "Could you suggest Chinese recipes for me to prepare at home?" ? "selected" : ""} onClick={() => handleDropdownClick("Could you suggest Chinese recipe  for me to prepare at home?")}> Could you suggest Chinese recipes for me to prepare at home?</p>
+                            <p className={selectedItem === "Show Filipino recipes that can be cook at home" ? "selected" : ""} onClick={() => handleDropdownClick("Show Filipino recipes that can be cook at home")}> Show Filipino recipes that can be cook at home</p>
                             <p className={selectedItem === "Recommend some indigenous Korean recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Recommend some indigenous Korean recipes")}>Recommend some indigenous Korean recipes</p>
                             <p className={selectedItem === "Give a list of some Australian recipes" ? "selected" : ""} onClick={() => handleDropdownClick("Give a list of some Australian recipes")}>Give a list of some Australian recipes</p>
-                            
-                            <p className={selectedItem === "Show me some Belgian dishes involving Chocolate." ? "selected" : ""} onClick={() => handleDropdownClick("Show me some Belgian dishes involving Chocolate.")}>Show me some Belgian dishes involving Chocolate.</p>
+                            <p className={selectedItem === "Show me some Belgian dishes involving Chocolate" ? "selected" : ""} onClick={() => handleDropdownClick("Show me some Belgian dishes involving Chocolate")}>Show me some Belgian dishes involving Chocolate</p>
                         </div>
                         </a>
                         &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a2' onClick={changeDisplay} style={{ textDecoration: 'None', color: 'black' }}> Ingredients <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon>
                             <div className="dropdown-content2">
-                                <p className={selectedItem === "Recommend dishes with chicken, broccoli, and garlic for tonight's dinner." ? "selected" : ""} onClick={() => handleDropdownClick("Recommend dishes with chicken, broccoli, and garlic for tonight's dinner.")}>Recommend dishes with chicken, broccoli, and garlic for tonight's dinner.</p>
+                                <p className={selectedItem === "Recommend dishes with chicken, broccoli, and garlic for tonight's dinner" ? "selected" : ""} onClick={() => handleDropdownClick("Recommend dishes with chicken, broccoli, and garlic for tonight's dinner")}>Recommend dishes with chicken, broccoli, and garlic for tonight's dinner</p>
                                 <p className={selectedItem === "Show me some French recipes involving Cheese" ? "selected" : ""} onClick={() => handleDropdownClick("Show me some French recipes involving Cheese")}>Show me some French recipes involving Cheese</p>
                                 <p className={selectedItem === "Provide Italian recipes that have wine as one the ingredients" ? "selected" : ""} onClick={() => handleDropdownClick("Provide Italian recipes that have wine as one the ingredients")}>Provide Italian recipes that have wine as one the ingredients</p>
                                 <p className={selectedItem === "Show me a diet having almonds and eggs" ? "selected" : ""} onClick={() => handleDropdownClick("Show me a diet having almonds and eggs")}>Show me a diet having almonds and eggs</p>
-                                <p className={selectedItem === "Show some desserts to make at home from sugar, milk, egg" ? "selected" : ""} onClick={() => handleDropdownClick("Show some desserts to make at home from sugar, milk, egg")}>Show some desserts to make at home from sugar, milk, egg</p>
+                                <p className={selectedItem === "Show some desserts to make from cream and sugar " ? "selected" : ""} onClick={() => handleDropdownClick("Show some desserts to make from cream and sugar ")}>Show some desserts to make from cream and sugar </p>
                                 {/* Add more items for this dropdown as needed */}
                             </div>
                         </a>
                         &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a3' onClick={changeDisplay} style={{ textDecoration: 'None', color: 'black' }}> Ingredient Category <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon>
                             <div className="dropdown-content3">
-                                <p className={selectedItem === "Show vegetable and fruit salad recipes for a healthy meal choice." ? "selected" : ""} onClick={() => handleDropdownClick("Show vegetable and fruit salad recipes for a healthy meal choice.")}>Show vegetable and fruit salad recipes for a healthy meal choice.</p>
-                                <p className={selectedItem === "Suggest legume-based recipes for a nutritious and satisfying meal, please" ? "selected" : ""} onClick={() => handleDropdownClick("Suggest legume-based recipes for a nutritious and satisfying meal, please")}>Suggest legume-based recipes for a nutritious and satisfying meal, please</p>
-                                <p className={selectedItem === "Show seafood recipes for a delectable ocean-inspired dining experience." ? "selected" : ""} onClick={() => handleDropdownClick("Show seafood recipes for a delectable ocean-inspired dining experience.")}>Show seafood recipes for a delectable ocean-inspired dining experience.</p>
-                                <p className={selectedItem === "Recommend bakery-style recipes." ? "selected" : ""} onClick={() => handleDropdownClick("Recommend bakery-style recipes.")}>Recommend bakery-style recipes.</p>
-                                <p className={selectedItem === "Suggest berry-infused recipes." ? "selected" : ""} onClick={() => handleDropdownClick("Suggest berry-infused recipes.")}>Suggest berry-infused recipes.</p>
+                                <p className={selectedItem === "Show recipes having fruit" ? "selected" : ""} onClick={() => handleDropdownClick("Show recipes having fruit")}>Show recipes having fruit</p>
+                                <p className={selectedItem === "Suggest legume based  recipes having tomato for a nutritious and satisfying meal" ? "selected" : ""} onClick={() => handleDropdownClick("Suggest legume-based recipes having tomato for a nutritious and satisfying meal")}>Suggest legume-based recipes having tomato for a nutritious and satisfying meal</p>
+                                <p className={selectedItem === "Show seafood recipes for a delectable ocean-inspired dining experience" ? "selected" : ""} onClick={() => handleDropdownClick("Show seafood recipes for a delectable ocean-inspired dining experience")}>Show seafood recipes for a delectable ocean-inspired dining experience</p>
+                                <p className={selectedItem === "Recommend bakery style recipes." ? "selected" : ""} onClick={() => handleDropdownClick("Recommend bakery style recipes.")}>Recommend bakery style recipes.</p>
+                                <p className={selectedItem === "Suggest chicken based recipe" ? "selected" : ""} onClick={() => handleDropdownClick("Suggest chicken based recipes.")}>Suggest chicken based recipes.</p>
                                 {/* Add more items for this dropdown as needed */}
                             </div>
 
                         </a>
                         &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a4' onClick={changeDisplay} style={{ textDecoration: 'None', color: 'black' }}> Cooking Process <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon>
                             <div className="dropdown-content4">
-                                <p className={selectedItem === "Can you recommend some dishes for lunch which do not require refrigeration." ? "selected" : ""} onClick={() => handleDropdownClick("Can you recommend some dishes for lunch which do not require refrigeration.")}>Can you recommend some dishes for lunch which do not require refrigeration.</p>
+                                <p className={selectedItem === "Show recipes having to whisk cream" ? "selected" : ""} onClick={() => handleDropdownClick("show recipes having to whisk cream")}>Show recipes having to whisk cream</p>
                                 <p className={selectedItem === "Show me recipes using drain method" ? "selected" : ""} onClick={() => handleDropdownClick("Show me recipes using drain method")}>Show me recipes using drain method</p>
                                 <p className={selectedItem === "Could you give dishes which involve seasoning with cilantro and lime" ? "selected" : ""} onClick={() => handleDropdownClick("Could you give dishes which involve seasoning with cilantro and lime")}>Could you give dishes which involve seasoning with cilantro and lime</p>
                                 {/* Add more items for this dropdown as needed */}
@@ -125,8 +124,8 @@ const Home = (props) => {
                         &nbsp;&nbsp; &nbsp; &nbsp;<a className='dropdown' id='a5' onClick={changeDisplay} style={{ textDecoration: 'None', color: 'black' }}>  Utensils <FontAwesomeIcon className='fa' icon={faCaretDown} ></FontAwesomeIcon>
                             <div className="dropdown-content5">
                                 <p className={selectedItem === "Can you give me some recipes which require cooking in a microwave?" ? "selected" : ""} onClick={() => handleDropdownClick("Can you give me some recipes which require cooking in a microwave?")}>Can you give me some recipes which require cooking in a microwave?</p>
-                                <p className={selectedItem === "Show me some recipes which don't need a oven" ? "selected" : ""} onClick={() => handleDropdownClick("Show me some recipes which don't need a oven")}>Show me some recipes which don't need a oven</p>
-                                <p className={selectedItem === "Can you recommend some recipes which don't need refrigeration" ? "selected" : ""} onClick={() => handleDropdownClick("Can you recommend some recipes which don't need refrigeration")}>Can you recommend some recipes which don't need refrigeration</p>
+                                <p className={selectedItem === "show how to make tea using saucepan" ? "selected" : ""} onClick={() => handleDropdownClick("show how to make tea using saucepan")}>show how to make tea using saucepan</p>
+                                <p className={selectedItem === "Show me recipe for soup to cook using pot" ? "selected" : ""} onClick={() => handleDropdownClick("Show me recipe for soup to cook using pot")}>Show me recipe for soup to cook using pot</p>
                                 {/* Add more items for this dropdown as needed */}
                             </div>
 
@@ -135,7 +134,7 @@ const Home = (props) => {
                 </p>
                 <div className="image-and-text-container">
                     <img
-                    src="/logo.png"
+                    src="/favicon.ico"
                     alt="Your Image"
                     className="custom-image"
                     />

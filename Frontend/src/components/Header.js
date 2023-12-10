@@ -40,7 +40,7 @@ const  Header = (props) =>{
     <nav className='headerStyles'>
        
         <ul>
-            <img src ="/logo.png" onClick={handleHomeClick} className='headerlogo'></img>
+            <img src ="/favicon.ico" onClick={handleHomeClick} className='headerlogo'></img>
             {/* <p>RecipeDB </p> */}
            <p onClick={ handleHomeClick} className='headertitle'> RecipeDB </p>
            

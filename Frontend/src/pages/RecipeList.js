@@ -100,7 +100,7 @@ const RecipeList = (props) => {
       <h2 className="left-margin">{listening ? 'Listening...' : ''}</h2>
       <form onSubmit={handleSubmit} className="centerdiv">
         <label>
-          <textarea type="text" value={user1Transcript || userTranscript} onChange={handleChange} placeholder="Click SPEAK Button to ask queries to RecipeDB..."className="textareastyleRL"
+          <textarea type="text" value={user1Transcript || userTranscript} onChange={handleChange}  onKeyPress={(event) => {if (event.key === 'Enter'){handleSubmit(event);}}} placeholder="Click SPEAK Button to ask queries to RecipeDB..."className="textareastyleRL"
           />
         </label>
       </form>
